@@ -1,0 +1,149 @@
+/* ===== NOVEDADES ===== */
+.novedades-section {
+  background: #fff;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 4rem;
+}
+
+/* Noticias */
+.noticia-card {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1.5px dashed #ddd;
+  transition: all 0.3s ease;
+}
+
+.noticia-card:hover {
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.noticia-titulo {
+  color: #c8102e;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.noticia-descripcion {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.6rem;
+}
+
+.noticia-fecha {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+
+/* ===== NOVEDADES SIDEBAR ===== */
+.novedades-sidebar {
+  margin-top: 2rem;
+}
+
+/* Caja principal */
+.sidebar-box {
+  background: linear-gradient(180deg, #fff8f8 0%, #fff 100%);
+  border-radius: 16px;
+  padding: 1.8rem 1.6rem;
+  border: 1.5px dashed #e9b9be;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.sidebar-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Título */
+.sidebar-box h5 {
+  color: #c8102e;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  margin-bottom: 1.3rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Línea decorativa bajo el título */
+.sidebar-box h5::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #c8102e;
+  border-radius: 2px;
+}
+
+/* Lista */
+.sidebar-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Ítems */
+.sidebar-box li {
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px dotted #e3b7bb;
+  transition: all 0.3s ease;
+}
+
+/* Último ítem sin línea */
+.sidebar-box li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Enlaces */
+.sidebar-box a {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Ícono decorativo */
+.sidebar-box a::before {
+  content: "›";
+  color: #c8102e;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Hover elegante */
+.sidebar-box a:hover {
+  color: #c8102e;
+  transform: translateX(4px);
+}
+
+.sidebar-box a:hover::before {
+  transform: translateX(3px);
+}
+
+@media (max-width: 991px) {
+  .sidebar-box {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border: 1.5px dashed #e8b7bc;
+    border-radius: 14px;
+  }
+
+  .novedades-sidebar {
+    margin-bottom: 2.5rem;
+  }
+}

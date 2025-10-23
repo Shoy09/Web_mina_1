@@ -1,0 +1,19 @@
+<!-- 🛠 Productos principales -->
+<div class="productos-principales">
+  <h2>Productos Principales</h2>
+  <div class="productos-grid">
+    <div class="producto-card" *ngFor="let producto of productosPrincipales">
+      <a>
+        <img [src]="producto.img" [alt]="producto.titulo">
+        <div class="producto-info">
+          <h3>{{ producto.titulo }}</h3>
+          <p>{{ producto.descripcion }}</p>
+        </div>
+        <span class="btn-mas">Más <i class="icon_right"></i></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 📞 Sección de contacto -->
+<app-contac-ing></app-contac-ing>

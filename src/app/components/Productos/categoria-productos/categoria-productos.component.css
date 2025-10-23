@@ -1,0 +1,72 @@
+.categoria-productos {
+  background-color: #f9fafb;
+  color: #333;
+}
+
+/* 📦 Tarjetas de categoría */
+.categoria-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.categoria-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* 🔘 Botón "Más >" */
+.btn-mas {
+  background-color: #c8102e;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 22px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-mas:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+}
+
+/* 💡 Ventajas */
+.ventajas ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ventajas li::before {
+  content: "✔";
+  color: #c8102e;
+  margin-right: 8px;
+}
+
+/* 🧾 Descripción final */
+.descripcion-final {
+  color: black;
+  text-align: center;
+  padding: 60px 0;
+  line-height: 1.7;
+}
+
+/* 🧱 Separadores */
+.separador {
+  height: 60px;
+  background: transparent;
+}
+
+/* ✨ Imagen principal */
+.descripcion img {
+  border-radius: 12px;
+  max-height: 280px;
+  object-fit: cover;
+}

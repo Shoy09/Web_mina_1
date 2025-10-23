@@ -1,0 +1,84 @@
+.contacto-section {
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+/* Encabezados */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c8102e;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Tarjeta */
+.contacto-card {
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.contacto-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+}
+
+/* Títulos */
+.contact-title {
+  color: #c8102e;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Inputs con íconos */
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #c8102e;
+  font-size: 1.1rem;
+}
+
+/* Inputs */
+.form-control {
+  padding-right: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-control:focus {
+  border-color: #c8102e;
+  box-shadow: 0 0 5px rgba(200, 16, 46, 0.3);
+}
+
+/* Botón */
+.btn-maxdrill {
+  background: #c8102e; /* color naranja Maxdrill */
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-maxdrill:hover {
+  background: #c8102e; /* rojo Maxdrill */
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .form-control {
+    font-size: 0.95rem;
+  }
+}

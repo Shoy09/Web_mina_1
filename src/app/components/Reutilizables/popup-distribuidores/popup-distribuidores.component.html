@@ -1,0 +1,31 @@
+<div
+  *ngIf="isVisible"
+  id="popupDistribuidores"
+  class="popup-distribuidores shadow-lg animate__animated animate__fadeIn"
+>
+  <div class="popup-header d-flex justify-content-between align-items-center">
+    <h5 class="mb-0 fw-bold">Buscamos Distribuidores</h5>
+    <button
+      type="button"
+      class="btn-close btn-close-white"
+      aria-label="Cerrar"
+      (click)="cerrarPopup()"
+    ></button>
+  </div>
+
+  <div class="popup-body">
+    <p>
+      Forme parte de nuestra red global de distribuidores y represente una marca reconocida internacionalmente en
+      herramientas de perforación.
+    </p>
+
+    <div class="d-flex flex-column align-items-start gap-2 mt-2">
+      <a class="btn btn-outline-light w-100" routerLink="/contacto">
+        Contáctenos
+      </a>
+      <a class="btn btn-primary w-100" href="assets/pdf/distributorsform.pdf" target="_blank">
+        Rellene el formulario
+      </a>
+    </div>
+  </div>
+</div>

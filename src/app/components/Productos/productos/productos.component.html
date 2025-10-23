@@ -1,0 +1,38 @@
+<section class="productos">
+  <div class="productos-banner">
+    <div class="banner-content">
+      <h2>Nuestros Productos</h2>
+      <p>
+        En Maxdrill, estamos orgullosos de nuestros avanzados procesos y procedimientos de fabricación,
+        que garantizan productos de alta calidad constante mediante el uso de acero y carburo de tungsteno.
+        Nuestro compromiso con la excelencia nos permite no sólo cumplir sino superar las expectativas
+        cuando se trata de sus necesidades de herramientas de perforación.
+      </p>
+    </div>
+  </div>
+
+  <div class="productos-grid">
+    <div class="producto-card" *ngFor="let producto of productos">
+      <img [src]="producto.img" [alt]="producto.titulo" />
+      <div class="producto-info">
+        <h3>{{ producto.titulo }}</h3>
+        <p>{{ producto.descripcion }}</p>
+      </div>
+      <button class="btn-mas" (click)="irACategorias()">
+  Más <i class="icon_right"></i>
+</button>
+
+    </div>
+  </div>
+
+  <div class="productos-brief">
+    <p>
+      Como fabricante fiable de herramientas de perforación que ofrece productos de alta calidad,
+      económicos y eficientes, Maxdrill se ha convertido en uno de los fabricantes con mejor reputación
+      en la industria de herramientas de perforación de rocas en China.
+      Confíe en nuestra experiencia y permítanos ofrecerle las soluciones de perforación que necesita.
+    </p>
+  </div>
+
+  <app-contac-ing></app-contac-ing>
+</section>

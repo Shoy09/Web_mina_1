@@ -1,0 +1,62 @@
+.footer {
+  background-color: #000;
+  color: #e0e0e0;
+  font-family: 'Roboto', sans-serif;
+  padding: 2rem 0; /* 🔹 antes era py-5 (3rem arriba y abajo), ahora más compacto */
+}
+
+.footer-title {
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem; /* 🔹 menos espacio debajo del título */
+  color: #fff;
+}
+
+.footer-logo {
+  max-width: 140px; /* 🔹 un poco más pequeño para ajustar visualmente */
+  margin-bottom: 0.75rem;
+}
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #555;
+  margin: 0.75rem 0; /* 🔹 antes era my-3 (1rem arriba y abajo) */
+}
+
+.footer ul li {
+  margin-bottom: 0.35rem; /* 🔹 menos espacio entre ítems */
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer ul li i {
+  color: #f26722;
+  font-size: 0.85rem;
+}
+
+.footer ul li:hover {
+  color: #f26722;
+}
+
+.footer p {
+  margin-bottom: 0.4rem; /* 🔹 compacta los textos de contacto */
+  font-size: 0.95rem;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    text-align: left; /* 🔹 Mantiene alineado a la izquierda en móviles */
+    padding: 1.5rem 0;
+  }
+
+  .footer .text-center {
+    text-align: left !important; /* 🔹 Asegura que la columna central también se alinee */
+  }
+
+  .footer-logo {
+    display: block;
+    margin-left: 0; /* 🔹 Evita centrado automático */
+  }
+}
+

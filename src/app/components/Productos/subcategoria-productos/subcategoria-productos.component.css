@@ -1,0 +1,113 @@
+.subcategoria-productos {
+  background-color: #f9fafb;
+  color: #333;
+}
+
+.quicknav ul {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding-left: 0;
+  flex-wrap: wrap;
+}
+
+.quicknav ul li::after {
+  content: "/";
+  margin-left: 5px;
+}
+
+.quicknav ul li:last-child::after {
+  content: "";
+}
+
+.quicknav a {
+  color: #c8102e;
+  text-decoration: none;
+}
+
+.quicknav a:hover {
+  text-decoration: underline;
+}
+
+/* Lista de productos estilo “fila” */
+.productos-list .producto-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  align-items: flex-start;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productos-list .producto-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.producto-img img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.producto-info h5 {
+  margin-bottom: 10px;
+}
+
+.producto-info p {
+  margin-bottom: 0;
+}
+
+.btn-mas {
+  background-color: #c8102e;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 6px 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-mas:hover {
+  background-color: #000;
+  transform: translateY(-1px);
+}
+
+.descripcion-final {
+  color: black;
+  text-align: center;
+  padding: 40px 20px;
+  line-height: 1.7;
+}
+
+.sidebar-productos {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.sidebar-productos ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar-productos a {
+  color: #000;
+  text-decoration: none;
+}
+
+.sidebar-productos a.active {
+  font-weight: 600;
+}
+
+.sidebar-productos ol {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 5px;
+}
+
+.separador {
+  height: 60px;
+}

@@ -1,0 +1,13 @@
+.banner-imagen {
+  width: 100%;
+  height: 90px; /* 🔹 Altura inicial — puedes ajustar este valor */
+  overflow: hidden;
+   margin-bottom: 40px;
+}
+
+.banner-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen llene el área sin deformarse */
+  display: block;
+}

@@ -1,0 +1,40 @@
+<section class="novedades-section">
+  <!-- Banner superior -->
+  <app-banner-imagen></app-banner-imagen>
+
+  <div class="container novedades-container">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-lg-4 novedades-sidebar order-1 order-lg-2">
+        <div class="sidebar-box">
+          <h5>Novedades recientes</h5>
+          <ul>
+            <li *ngFor="let nov of novedadesRecientes">
+              <a href="#">{{ nov }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Noticias -->
+      <div class="col-lg-8 novedades-list order-2 order-lg-1">
+        <div class="noticia-card" *ngFor="let item of noticias">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <h4 class="noticia-titulo">{{ item.titulo }}</h4>
+              <p class="noticia-descripcion">{{ item.descripcion }}</p>
+              <span class="noticia-fecha">
+                <i class="bi bi-calendar-event"></i> {{ item.fecha }}
+              </span>
+            </div>
+            <div class="col-md-4" *ngIf="item.imagen">
+              <img [src]="item.imagen" [alt]="item.titulo" class="img-fluid rounded shadow-sm" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-pro-princi-contac></app-pro-princi-contac>
+</section>

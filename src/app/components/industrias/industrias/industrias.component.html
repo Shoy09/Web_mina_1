@@ -1,0 +1,59 @@
+<section class="industrias">
+
+    <!-- 🌄 Banner superior -->
+  <app-banner-imagen></app-banner-imagen>
+
+  <!-- 🏭 Encabezado principal -->
+ <div class="industrias-header">
+  <div class="header-image">
+    <img src="/products/app_img_01.jpg" alt="Industrias Maxdrill">
+  </div>
+  <div class="header-content">
+    <h2>INDUSTRIAS</h2>
+    <p>
+      Maxdrill es un proveedor líder de productos de perforación profesional. Con una diversa gama de ofertas y soluciones a medida para la minería, canteras, túneles, perforación de pozos de agua, y más, estamos dedicados a ayudar a nuestros clientes a maximizar la productividad y la rentabilidad.
+    </p>
+    <p>
+      Gracias a la continua retroalimentación de nuestros clientes y la mejora continua de nuestros productos, hemos establecido asociaciones a largo plazo con clientes internacionales. Esperamos tener el honor de ser su socio de confianza.
+    </p>
+    <p>
+      Póngase en contacto con nosotros para obtener más información sobre nuestros productos y servicios.
+    </p>
+  </div>
+</div>
+
+
+  <!-- 🧱 Lista de industrias -->
+  <div class="industria-list">
+  <div class="industria-card-horizontal" *ngFor="let item of industrias">
+    <div class="industria-img">
+      <img [src]="item.img" [alt]="item.titulo">
+    </div>
+    <div class="industria-info">
+      <h3>{{ item.titulo }}</h3>
+      <div class="divider"></div>
+      <p>{{ item.descripcion }}</p>
+      <a class="btn-ver-mas">Más <i class="icon_right"></i></a>
+    </div>
+  </div>
+</div>
+
+
+  <!-- 📄 Descripción general -->
+<div class="industrias-brief-card">
+  <div class="industrias-brief">
+    <p>
+      Como fabricante confiable de herramientas de perforación, Maxdrill ofrece productos de alta calidad, económicos y eficientes. 
+      Nuestro compromiso es entregar soluciones rentables y sostenibles para cualquier tipo de roca o condición de perforación. 
+      Confíe en nuestra experiencia y permítanos ofrecerle las soluciones de perforación que necesita.
+    </p>
+  </div>
+
+  <div class="btn-cotizacion-container">
+    <button class="btn-cotizacion">Solicitar Cotización</button>
+  </div>
+</div>
+
+<app-pro-princi-contac></app-pro-princi-contac>
+
+</section>

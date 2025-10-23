@@ -1,0 +1,241 @@
+/* ====== ESTRUCTURA GENERAL ====== */
+.industrias {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+   padding-bottom: 4rem; 
+}
+
+/* ====== ENCABEZADO INDUSTRIAS ====== */
+.industrias-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin: 3rem auto;          /* 🔹 Centra horizontalmente */
+  max-width: 1100px;          /* 🔹 Controla el ancho total */
+  width: 90%;                 /* 🔹 Adaptable en pantallas pequeñas */
+}
+
+/* Imagen a la izquierda */
+.header-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;           /* 🔹 Un poco más compacto */
+}
+
+.header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Texto sobre fondo naranja a la derecha */
+.header-content {
+  flex: 1;
+  background-color: #c8102e; /* 🔹 Color corporativo */
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.header-content p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* 🔹 Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .industrias-header {
+    flex-direction: column;
+    max-width: 95%;
+  }
+
+  .header-content {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .header-image {
+    max-width: 100%;
+  }
+}
+
+
+/* ====== LIST ====== */
+.industria-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+/* ====== CARD HORIZONTAL COMO EN LA IMAGEN ====== */
+.industria-card-horizontal {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 80%; /* 🔹 Ajusta el ancho global (puedes cambiar a 70% si lo quieres más angosto) */
+  max-width: 1100px; /* 🔹 Evita que crezca demasiado en pantallas grandes */
+}
+
+.industria-card-horizontal:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen lateral */
+.industria-card-horizontal .industria-img {
+  flex: 1 1 45%;
+  overflow: hidden;
+}
+
+.industria-card-horizontal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.industria-card-horizontal:hover img {
+  transform: scale(1.05);
+}
+
+/* Contenido */
+.industria-card-horizontal .industria-info {
+  flex: 1 1 55%;
+  padding: 2rem 2.5rem;
+}
+
+.industria-card-horizontal h3 {
+  color: #c8102e;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background-color: #c8102e;
+  margin: 0.5rem 0 1.5rem 0;
+  border-radius: 3px;
+}
+
+.industria-card-horizontal p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón */
+.btn-ver-mas {
+  display: inline-block;
+  background-color: #eaeaea;
+  color: #333;
+  border-radius: 25px;
+  padding: 0.6rem 1.6rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.industria-card-horizontal:hover .btn-ver-mas {
+  background-color: #c8102e;
+  color: #fff;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+  .industria-card-horizontal {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .industria-card-horizontal .industria-info {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .divider {
+    margin: 0.5rem auto 1.5rem auto;
+  }
+}
+
+
+/* ====== CARD DE DESCRIPCIÓN Y BOTÓN ====== */
+.industrias-brief-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 2rem;
+  max-width: 950px;
+  margin: 4rem auto; /* separación del contenido anterior */
+  text-align: center;
+}
+
+.industrias-brief-card .industrias-brief {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* ====== BOTÓN DE COTIZACIÓN ====== */
+.btn-cotizacion-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-cotizacion {
+  background-color: #c8102e;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.9rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(200, 16, 46, 0.25);
+}
+
+.btn-cotizacion:hover {
+  background-color: #a40d24;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(200, 16, 46, 0.35);
+}
+
+.btn-cotizacion:active {
+  transform: translateY(0);
+}
+
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .industrias-header {
+    flex-direction: column;
+  }
+
+  .header-content h2 {
+    text-align: center;
+  }
+}

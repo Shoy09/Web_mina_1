@@ -1,0 +1,69 @@
+/* ===== BOTÓN SUBIR ===== */
+.boton-subir {
+  position: fixed;
+  bottom: 85px; /* 🔹 Más cerca del otro botón */
+  right: 45px; /* 🔹 Más a la derecha */
+  background-color: #c8102e;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-subir:hover {
+  background-color: #000;
+  transform: translateY(-3px);
+}
+
+/* ===== BOTÓN “ENVIAR MENSAJE” ===== */
+.boton-mensaje {
+  position: fixed;
+  bottom: 30px; /* 🔹 Mantiene espacio desde el borde inferior */
+  right: 45px; /* 🔹 Alineado con el botón de subir */
+  background-color: #c8102e;
+  border: 2px solid #000; /* ✅ Borde negro añadido */
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  overflow: hidden;
+  z-index: 1099;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25); /* ✨ Sombra sutil */
+}
+
+.boton-mensaje:hover {
+  background-color: #ae4456eb;
+  transform: translateY(-3px);
+}
+
+/* Icono negro a la izquierda */
+.boton-mensaje .icono {
+  background-color: #000;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-mensaje .icono i {
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* Texto del botón */
+.boton-mensaje .texto {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}

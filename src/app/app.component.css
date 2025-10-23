@@ -1,0 +1,68 @@
+/* Contenedor principal */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header y Navbar transparentes y juntos al inicio */
+.header-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-container app-header,
+.header-container app-navbar {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* Cuando el usuario hace scroll */
+.header-container.scrolled app-header {
+  display: none; /* El header desaparece */
+}
+
+.header-container.scrolled app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+
+  /* 🔹 Color de fondo con transparencia tipo "vidrio ahumado" */
+  background-color: rgba(0, 0, 0, 0.55); /* 55% de opacidad, ajusta si lo quieres más claro u oscuro */
+
+  /* 🔹 Transición suave al aparecer o desaparecer */
+  transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+  /* 🔹 Sombra sutil para separar del fondo */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+  /* ❌ Sin desenfoque, queremos ver el fondo claramente */
+  backdrop-filter: none;
+}
+
+
+
+/* Contenido principal debajo del header */
+.main-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding-top: 35px; /* Ajusta según tu header real */
+}
+
+/* Quita márgenes globales */
+:host,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

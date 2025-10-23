@@ -1,0 +1,63 @@
+<section class="subcategoria-productos">
+
+  <!-- 🌄 Banner superior -->
+  <app-banner-imagen></app-banner-imagen>
+
+  <div class="container py-5">
+    <div class="row">
+      <!-- Contenido principal -->
+      <div class="col-lg-8">
+
+
+        <!-- Título subcategoría -->
+        <h2>{{ subcategoria.titulo }}</h2>
+        <p>{{ subcategoria.descripcion }}</p>
+
+        <!-- Lista de productos -->
+        <div class="productos-list mt-4">
+          <div class="producto-item d-flex mb-4" *ngFor="let producto of subcategoria.productos">
+            <div class="producto-img me-3">
+              <img [src]="producto.img" [alt]="producto.titulo" class="img-fluid rounded">
+            </div>
+            <div class="producto-info flex-grow-1 d-flex flex-column">
+              <h5 class="text-primary">{{ producto.titulo }}</h5>
+              <p class="text-muted flex-grow-1">{{ producto.descripcion }}</p>
+              <div class="text-end mt-2">
+                <button class="btn-mas">Más <i class="bi bi-chevron-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Descripción final -->
+        <div class="descripcion-final py-5">
+          <p>{{ subcategoria.descripcionFinal }}</p>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="sidebar-productos">
+          <h4>Lista de productos</h4>
+          <ul>
+            <li *ngFor="let cat of listaCategorias">
+              <a [class.active]="cat.link === activeCategoria">{{ cat.titulo }}</a>
+              <ol *ngIf="cat.subproductos">
+                <li *ngFor="let sub of cat.subproductos">
+                  <a [class.active]="sub.link === activeSubcategoria">{{ sub.titulo }}</a>
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separador"></div>
+
+  <app-contac-ing></app-contac-ing>
+
+  <div class="separador"></div>
+</section>

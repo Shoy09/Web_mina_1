@@ -1,0 +1,72 @@
+.popup-distribuidores {
+  position: fixed;
+  right: 0; /* Pegado completamente al borde derecho */
+  bottom: 280px; /* Ajusta para moverlo arriba/abajo */
+  width: 320px;
+  background: rgba(11, 17, 33, 0.95);
+  color: #fff;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 1rem 1.2rem;
+  z-index: 1080;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease;
+}
+
+.popup-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 0.4rem;
+
+  h5 {
+    font-size: 1.05rem;
+  }
+
+  .btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.popup-body p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  margin-top: 0.8rem;
+}
+
+.btn-primary {
+  background-color: #e63946;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: #d62828;
+    transform: translateY(-2px);
+  }
+}
+
+.btn-outline-light {
+  border-radius: 8px;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: #fff;
+    color: #0b1121;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

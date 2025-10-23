@@ -1,0 +1,27 @@
+.top-header {
+  background-color: #000000; /* negro sólido sin transparencia */
+  height: 35px; /* un poco más pequeño */
+  color: white;
+  font-size: 16px; /* texto más pequeño */
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centra el contenido */
+  padding: 0 20px; /* padding lateral para que no quede pegado a los bordes */
+}
+
+.social-link {
+  color: white;
+  margin: 0 15px; /* menos separación entre iconos */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #0d6efd; /* azul elegante al pasar el mouse */
+  transform: scale(1.2); /* ligero zoom */
+}
+
+.top-header i {
+  font-size: 18px; /* iconos más pequeños */
+}

@@ -1,0 +1,97 @@
+.videos-section {
+  background: #fff;
+  color: #222;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* ====== Encabezados ====== */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c8102e;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* ====== Video principal ====== */
+.video-main {
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fff8f8 0%, #fff 100%);
+  border: 1.5px dashed #e9b9be;
+}
+
+.video-main img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ====== Cards de videos ====== */
+.video-card {
+  border: 1px dashed #ddd;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+/* ====== Imagen y botón play ====== */
+.video-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.video-card:hover img {
+  transform: scale(1.05);
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #c8102e;
+  font-size: 2.5rem;
+  opacity: 0.85;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover .play-icon {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .video-thumb img {
+    height: 150px;
+  }
+}
+.categoria-title {
+  font-size: 1rem; /* más pequeño */
+  font-weight: 600;
+  color: #c8102e;
+  margin-bottom: 0.8rem; /* un poco menos de espacio */
+  border-bottom: 1px dashed #e9b9be;
+  padding-bottom: 0.2rem;
+}

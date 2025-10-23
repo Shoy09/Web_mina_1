@@ -1,0 +1,163 @@
+.about-maxdrill {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding-bottom: 4rem; 
+}
+/* ====== Secciones ====== */
+.about-section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.about-section.alt {
+  background: #f2f2f2;
+}
+
+/* ====== Textos ====== */
+.about-title {
+  color: #c8102e;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about-subtitle {
+  font-size: 1.3rem;
+  color: #c8102e;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.about-section p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* ====== Galería ====== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ====== Lista ====== */
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.about-list li {
+  background-color: #eaeaea;
+  border-radius: 25px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.about-list li:hover {
+  background-color: #c8102e;
+  color: #fff;
+}
+
+/* ====== FAQ SECTION ====== */
+.faq-section {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+}
+
+.faq-section .about-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #c8102e;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.faq-section .about-subtitle::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #c8102e;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 3px;
+}
+
+/* Estilo de lista FAQ */
+.faq-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faq-section li {
+  background-color: #fafafa;
+  border: 1.5px dashed #c8102e; /* 🔹 borde punteado elegante */
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.faq-section li:hover {
+  background-color: #fff5f6;
+  box-shadow: 0 4px 10px rgba(200, 16, 46, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Texto */
+.faq-section strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #c8102e;
+  margin-bottom: 0.4rem;
+}
+
+.faq-section p {
+  margin: 0;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-section {
+    padding: 1.5rem;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.1rem;
+  }
+}

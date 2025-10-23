@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-lg custom-navbar px-4">
+  <!-- LOGO / ICONO -->
+  <a class="navbar-brand d-flex align-items-center" href="#">
+    <i class="bi bi-gear-fill me-2"></i>
+    <span class="fw-bold">MAXDRILL</span>
+  </a>
+
+  <!-- BOTÓN RESPONSIVE -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- LINKS -->
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav align-items-center">
+
+      <!-- Inicio -->
+      <li class="nav-item">
+        <div class="nav-link-container">
+          <a class="nav-link" [class.active-link]="isActive('/')" href="#">Inicio</a>
+        </div>
+      </li>
+
+      <!-- Productos -->
+      <li class="nav-item dropdown" #productosDropdown>
+        <div class="nav-link-container">
+          <a class="nav-link" [class.active-link]="isActive('/productos')" href="/productos">
+            Productos
+          </a>
+          <button class="dropdown-toggle-mobile"
+                  (click)="toggleDropdown($event, productosDropdown)"
+                  aria-label="Desplegar menú de Productos">
+            <i class="bi bi-chevron-down"></i>
+          </button>
+        </div>
+        <ul class="dropdown-menu" aria-labelledby="productosMenu">
+          <li><a class="dropdown-item" href="#">Brocas</a></li>
+          <li><a class="dropdown-item" href="#">Martillos</a></li>
+          <li><a class="dropdown-item" href="#">Accesorios</a></li>
+        </ul>
+      </li>
+
+      <!-- Industrias -->
+      <li class="nav-item dropdown" #industriasDropdown>
+        <div class="nav-link-container">
+          <a class="nav-link" [class.active-link]="isActive('/industrias')" href="/industrias">
+            Industrias
+          </a>
+          <button class="dropdown-toggle-mobile"
+                  (click)="toggleDropdown($event, industriasDropdown)"
+                  aria-label="Desplegar menú de Industrias">
+            <i class="bi bi-chevron-down"></i>
+          </button>
+        </div>
+        <ul class="dropdown-menu" aria-labelledby="industriasMenu">
+          <li><a class="dropdown-item" href="#">Minería</a></li>
+          <li><a class="dropdown-item" href="#">Construcción</a></li>
+          <li><a class="dropdown-item" href="#">Petróleo y gas</a></li>
+        </ul>
+      </li>
+
+      <!-- Sobre Maxdrill -->
+      <li class="nav-item dropdown" #maxdrillDropdown>
+        <div class="nav-link-container">
+          <a class="nav-link" [class.active-link]="isActive('/sobre')" href="/sobre">
+            Sobre Maxdrill
+          </a>
+          <button class="dropdown-toggle-mobile"
+                  (click)="toggleDropdown($event, maxdrillDropdown)"
+                  aria-label="Desplegar menú Sobre Maxdrill">
+            <i class="bi bi-chevron-down"></i>
+          </button>
+        </div>
+        <ul class="dropdown-menu" aria-labelledby="maxdrillMenu">
+          <li><a class="dropdown-item" href="#">Nuestra historia</a></li>
+          <li><a class="dropdown-item" href="#">Misión y visión</a></li>
+          <li><a class="dropdown-item" href="#">Equipo</a></li>
+        </ul>
+      </li>
+
+      <!-- Novedades -->
+      <li class="nav-item">
+        <div class="nav-link-container">
+          <a class="nav-link" [class.active-link]="isActive('/novedades')" href="/novedades">Novedades</a>
+        </div>
+      </li>
+
+      <!-- Videos -->
+      <li class="nav-item">
+        <div class="nav-link-container">
+          <a class="nav-link" [class.active-link]="isActive('/videos')" href="/videos">Videos</a>
+        </div>
+      </li>
+
+      <!-- Contáctenos -->
+      <li class="nav-item">
+        <div class="nav-link-container">
+          <a class="nav-link" [class.active-link]="isActive('/contacto')" href="/contacto">Contáctenos</a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</nav>

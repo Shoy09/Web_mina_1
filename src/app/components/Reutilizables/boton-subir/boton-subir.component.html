@@ -1,0 +1,21 @@
+<!-- Botón de subir (solo visible al hacer scroll) -->
+<button
+  *ngIf="mostrarBoton"
+  class="boton-subir btn shadow-lg"
+  (click)="subirArriba()"
+  aria-label="Subir al inicio"
+>
+  <i class="bi bi-arrow-up-circle-fill"></i>
+</button>
+
+<!-- Botón “Enviar mensaje” (siempre visible) -->
+<a
+  class="boton-mensaje d-flex align-items-center shadow-lg text-decoration-none"
+  (click)="abrirDialogoContacto()"
+>
+  <div class="icono">
+    <i class="bi bi-envelope-fill"></i>
+  </div>
+  <span class="texto">ENVIAR MENSAJE</span>
+</a>
+

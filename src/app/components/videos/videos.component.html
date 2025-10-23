@@ -1,0 +1,46 @@
+<section class="videos-section">
+  <app-banner-imagen></app-banner-imagen>
+
+  <div class="container py-5">
+    <!-- Encabezado principal -->
+    <div class="text-center mb-5">
+      <h2 class="section-title">Videos de la empresa</h2>
+      <p class="section-subtitle">Explora nuestros videos institucionales y de productos</p>
+    </div>
+
+    <!-- Video principal -->
+    <div class="card video-main mb-5 shadow-sm">
+      <img [src]="videoPrincipal.img" [alt]="videoPrincipal.titulo" class="card-img-top" />
+      <div class="card-body">
+        <h4 class="text-danger fw-bold">{{ videoPrincipal.titulo }}</h4>
+        <p>
+          Maxdrill utiliza técnicas avanzadas de fabricación y acero de alta calidad para ofrecer herramientas
+          de perforación confiables. Desde 2005, seguimos comprometidos con la excelencia y la innovación en la
+          industria minera y de construcción.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sección: Videos de productos por categoría -->
+    <h3 class="section-subtitle text-center mb-4 text-danger">Videos de productos</h3>
+
+    <div *ngFor="let categoria of categoriasProductos" class="mb-5">
+      <h6 class="categoria-title mb-3">{{ categoria.categoria }}</h6>
+      <div class="row g-4">
+        <div class="col-6 col-md-4 col-lg-3" *ngFor="let video of categoria.videos">
+          <div class="card video-card shadow-sm h-100">
+            <div class="video-thumb position-relative">
+              <img [src]="video.img" [alt]="video.titulo" class="card-img-top rounded-top" />
+              <span class="play-icon"><i class="bi bi-play-circle-fill"></i></span>
+            </div>
+            <div class="card-body text-center">
+              <h6 class="text-dark fw-semibold">{{ video.titulo }}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>

@@ -1,0 +1,81 @@
+<section class="categoria-productos">
+
+  <!-- 🌄 Banner superior -->
+  <app-banner-imagen></app-banner-imagen>
+
+  <!-- 🧱 Descripción general -->
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <div class="descripcion">
+          <h2>{{ productoTitulo }}</h2>
+          <p>{{ productoDescripcion }}</p>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <img [src]="productoImagen" [alt]="productoTitulo" class="img-fluid rounded shadow-sm" />
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔹 Categorías -->
+  <div class="container py-5">
+    <div class="row g-4 justify-content-center">
+      <div
+        class="col-12 col-md-6"
+        *ngFor="let item of categorias"
+      >
+        <div class="categoria-card shadow-sm h-100 d-flex flex-column">
+          <a class="text-decoration-none flex-grow-1">
+            <img [src]="item.img" [alt]="item.titulo" class="img-fluid rounded-top" />
+            <div class="p-4">
+              <h5 class="fw-semibold text-dark mb-3">{{ item.titulo }}</h5>
+              <p class="text-muted">{{ item.descripcion }}</p>
+            </div>
+          </a>
+          <div class="text-center pb-3">
+            <button class="btn-mas" (click)="irACategorias()" >Más <i class="bi bi-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 💡 Ventajas -->
+  <div class="container ventajas py-5">
+    <h3 class="text-center mb-4">¿Por qué elegir las herramientas de perforación Maxdrill?</h3>
+    <p class="text-center">
+      Con años de experiencia, Maxdrill desarrolla herramientas diseñadas para optimizar el rendimiento de perforación en diversos entornos.
+      Nuestra prioridad es ofrecer productos eficientes, duraderos y sostenibles.
+    </p>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <ul>
+          <li *ngFor="let ventaja of ventajasCol1">{{ ventaja }}</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul>
+          <li *ngFor="let ventaja of ventajasCol2">{{ ventaja }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🧾 Descripción final -->
+  <div class="descripcion-final py-5">
+    <div class="container">
+      <p>{{ descripcionFinal }}</p>
+    </div>
+  </div>
+
+  <!-- Espaciado visual -->
+  <div class="separador"></div>
+
+  <!-- 🔸 Contacto principal -->
+  <app-contac-ing></app-contac-ing>
+
+  <!-- Espaciado inferior -->
+  <div class="separador"></div>
+
+</section>
